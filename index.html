@@ -4,52 +4,99 @@
   
   <head>
     <meta charset="UTF-8">
-    <title>Productos - Barberia Alura</title>
+    <title>Contacto - Barberia Alura</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="productos.css">
+    <link rel="stylesheet" href="contacto.css">
   </head>
 
   <body>
     <header>
       <div class="caja">
-        <h1><img src="logo.png"></h1>
+        <h1><img src="logo.png" alt="Logo de la Barberia Alura"></h1>
         <nav>
           <ul>
             <li><a href="https://htmlycss1.vel0w1.repl.co/index.html">Home</a></li>
-            <li><a href="index.html">Productos</a></li>
+            <li><a href="productos.html">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
     <main>
-      <ul class="productos">
-        <li>
-          <h2>Cabello</h2>
-          <img src="cabello.jpg">
-          <p class="productos-desc">Con tijera o máquina, a gusto del cliente</p>
-          <p class="productos-precio">$10</p>
-        </li>
+      <form>
+        <label for="nombrecompleto">Nombre y apellido</label>
+        <input type="text" id="nombrecompleto" class="input-main" required>
         
-        <li>
-          <h2>Barba</h2>
-          <img src="barba.jpg">
-          <p class="productos-desc">Corte y diseño profesional de barba</p>
-          <p class="productos-precio">$8</p>
-        </li>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" class="input-main" required placeholder="email@dominio.com">
         
-        <li>
-          <h2>Cabello + Barba</h2>
-          <img src="cabello+barba.jpg">
-          <p class="productos-desc">Paquete completo de cabello y barba</p>
-          <p class="productos-precio">$15</p>
-        </li>
-      </ul>
+        <label for="telefono"> Teléfono</label>
+        <input type="tel" id="telefono" class="input-main" required placeholder="(XX) XXXX XXXX">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea cols="70" rows="10" id="mensaje" class="input-main" required></textarea>
+
+        <fieldset>
+          <legend>¿Cómo le gustaria que lo contactemos?</legend>
+          
+          <label for="radio-correo"><input type="radio" name="contacto" value="email" id="radio-correo">Email</label>          
+
+          <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+          
+          <label for="radio-whatsapp"><input type="radio" name="contacto" value="email" id="radio-whatsapp" checked>Whatsapp</label>
+          
+        </fieldset>
+
+        <fieldset>
+          
+          <legend>¿En qué horario prefiere ser atendido?</legend>
+          <select>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+          
+        </fieldset>
+
+        <label class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de la Barberia Alura?</label>
+        
+        <input type="submit" value="Enviar formulario" class="enviar">
+        
+      </form>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Horario</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>08:00 am ~ 08:00 pm</td>
+          </tr>
+
+          <tr>
+            <td>Miercoles</td>
+            <td>08:00 am ~ 08:00 pm</td>
+          </tr>
+
+          <tr>
+            <td>Viernes</td>
+            <td>08:00 am ~ 08:00 pm</td>
+          </tr>
+          
+        </tbody>
+        
+      </table>
       
     </main>
+    
     <footer>
-      <img src="logo-blanco.png">
+      <img src="logo-blanco.png" alt="Logo de la Barberia Alura">
       <p class="copy">&copy Copyright Barberia Alura - 2023</p>
     </footer>
   </body>
